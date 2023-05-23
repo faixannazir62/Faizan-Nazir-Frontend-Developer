@@ -246,20 +246,23 @@ p {
   width: 70%;
   text-align: right;
 }
-/* responsive css */
-/* top banner css */
+/* small screen css responsive css */
 @media only screen and (max-width: 999px) {
   .text-box {
     width: 60%;
     padding-top: 50px;
-
+  }
+  .popup {
+    height: 100vh;
+  }
+  .popup-content {
+    min-width: 90%;
   }
 }
 @media only screen and (max-width: 750px) {
   .text-box {
     width: 60%;
     padding-top: 50px;
-
   }
   .text-box p {
     padding-right: 20px;
@@ -288,5 +291,14 @@ p {
   }
   .text-box p {
     padding-right: 10px;
+  }
+}
+/* big screen css responsive css */
+@media only screen and (max-width: 1850px) and (min-width: 1350px) {
+  .text-box {
+    padding-top: 80px;
+  }
+  .main-from-sec {
+    height: 680px;
   }
 }
