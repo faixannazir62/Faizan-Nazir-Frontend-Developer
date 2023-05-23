@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import "./styles/App.css";
+import Header from "./sections/Header";
+import TopBannerSection from "./sections/TopBannerSection";
+import FormSection from "./sections/FormSection";
+import GridSection from "./sections/GridSection";
+import { DataContext } from "./contexts/DataContext";
 function App() {
+  //gobal varibles
+  const [dataLoaded, setDataLoaded] = useState(false);
+  const [fetcheddata, setFetchedData] = useState([]);
+  //for end points
+  const filters = {};
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      {/* Header component */}
+      <Header />
+      {/* Mian content starts form here */}
+      <main>
+        {/* Top banner section component */}
+        <TopBannerSection />
+
+        {/* sending data to child components using context API*/}
+        <DataContext.Provider
+          value={{
+            dataLoaded,
+            setDataLoaded,
+            fetcheddata,
+            setFetchedData,
+            filters,
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          {/* form section section component */}
+          <FormSection />
+          {/* Grid section section component */}
+          <GridSection />
+        </DataContext.Provider>
+      </main>
+    </>
   );
 }
 

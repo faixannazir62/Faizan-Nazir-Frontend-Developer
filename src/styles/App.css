@@ -1,0 +1,248 @@
+body {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  background-color: #000;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+}
+/* top section css starts from here */
+#logo {
+  position: absolute;
+  top: 32px;
+  left: 50px;
+  width: 210px;
+  height: auto;
+}
+
+#logo .fill-white {
+  fill: white;
+}
+/*i have used same orginal pictures which are used in Spacex website*/
+#t-banner-sec {
+  background-image: url(https://www.spacex.com/static/images/backgrounds/dragon_feature.jpg);
+  height: 100vh;
+}
+#t-banner-sec,
+.main-from-sec,
+.grid-sec {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.text-box {
+  width: 40%;
+  text-align: left;
+  padding-left: 50px;
+  position: absolute;
+  top: 240px;
+}
+#t-banner-sec h1,
+.inner-from-sec h3 {
+  position: relative;
+  font-family: "Kanit", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 48px;
+  color: #ffffff;
+  margin: auto;
+}
+p {
+  font-family: "Kanit", sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-style: normal;
+  margin: 15px 0;
+  padding-right: 70px;
+}
+.scrollme {
+  position: absolute;
+  bottom: 40px;
+  left: 48%;
+  animation: updown 2.5s infinite;
+}
+.scrollme svg {
+  fill: transparent;
+}
+
+@keyframes updown {
+  0% {
+    bottom: 40px;
+  }
+  25% {
+    bottom: 35px;
+  }
+  75% {
+    bottom: 30px;
+  }
+  100% {
+    bottom: 25px;
+    opacity: 0;
+  }
+}
+/* *******top section css ends here****** */
+
+/* from section css starts from here */
+.main-from-sec {
+  background-image: url(../images/Dragon_Render_Desktop.jpg);
+  height: 480px;
+}
+.inner-from-sec {
+  padding-left: 50px;
+  padding-top: 150px;
+}
+.t-two-fields-bx,
+.bttm-inner-bx,
+.btn-box {
+  display: flex;
+  gap: 40px;
+}
+.search-flt select option:disabled {
+  color: #000 !important;
+}
+.search-flt select {
+  padding: 10px 70px 10px 5px;
+  width: 200px;
+  font-family: "Kanit", sans-serif;
+}
+.search-flt .t-two-fields-bx,
+.search-flt .bttm-inner-bx {
+  padding-bottom: 25px;
+}
+
+.inner-from-sec h3 {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+.t-two-fields-bx .filter:last-child label:first-child {
+  padding-left: 20px;
+}
+.btn-box {
+  justify-content: center;
+}
+.btn-box button {
+  font-weight: 700;
+  padding: 8px 65px;
+  font-size: 15px;
+  width: 200px;
+  font-family: "Kanit", sans-serif;
+}
+/* from section css end  here */
+
+/* Grid section css starts from here */
+.grid-sec {
+  background-image: url(../images/grid_image2.jpg);
+  padding: 50px;
+}
+.grid-heading {
+  text-align: center;
+  font-size: 48px;
+}
+.cap-data-sec {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.cap-data-sec .capsules-data-bx {
+  flex: 1 0 0 21%;
+  width: 220px;
+  height: fit-content;
+  max-width: 230px;
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  height: 30px;
+  white-space: nowrap;
+  border-bottom: 1pt solid rgba(255, 255, 255, 0.3);
+  padding: 0;
+}
+
+.page-btns {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.page-btns button {
+  font-size: 1rem;
+  text-decoration: underline;
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+.page-btns button:disabled {
+  color: gray;
+}
+/* loader css */
+.loader {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+/* pop up css */
+.popup {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000000c9;
+  overflow-y: scroll;
+  padding: 20px 0 30px;
+}
+/* hide popup scrollbar */
+.popup::-webkit-scrollbar {
+  display: none;
+}
+.popup-content {
+  margin: 50px 0;
+  min-width: 600px;
+  padding: 20px;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  background: #0000009c;
+}
+.popup-content .item-data {
+  padding-right: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid;
+  min-height: 40px;
+  width: 100%;
+}
+.popup-content .btn-bx {
+  display: flex;
+  justify-content: flex-end;
+}
+.popup-content .popup-close-btn {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  border-radius: 25px;
+}
+.item-data span:last-child {
+  width: 70%;
+  text-align: right;
+}
