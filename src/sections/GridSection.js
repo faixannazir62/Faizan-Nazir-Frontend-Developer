@@ -8,12 +8,9 @@ function GridSection() {
   useEffect(() => {
     loadData();
   });
-  //All capsules data
-
-  const loadData = () => {
-   
+  const loadData = async () => {
     // Send the request to the PHP file
-    fetch(
+    await fetch(
       "http://localhost:3500/rest/index.php?endpoint=" +
         encodeURIComponent(Endpoints(filters)),
       {
