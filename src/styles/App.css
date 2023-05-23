@@ -22,7 +22,7 @@ body {
 }
 /*i have used same orginal pictures which are used in Spacex website*/
 #t-banner-sec {
-  background-image: url(https://www.spacex.com/static/images/backgrounds/dragon_feature.jpg);
+  background-image: url(../images/top_banner.jpg);
   height: 100vh;
 }
 #t-banner-sec,
