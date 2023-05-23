@@ -3,6 +3,7 @@ import { DataContext } from "../contexts/DataContext";
 function FormSection() {
   //context api Gobal varibles
   const { setFilters, SetFiltersActive } = useContext(DataContext);
+  // store filters locally
   const filters = {};
   // on form submit
   const onFormSubmit = (event) => {
@@ -19,7 +20,7 @@ function FormSection() {
       //Make filter Active
       SetFiltersActive(true);
     });
-    // passing filtes
+    // passing fillters: it was sending empty object if we direct store filters into setFilters variable.
     setFilters(filters);
   };
   return (
