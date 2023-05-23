@@ -246,3 +246,47 @@ p {
   width: 70%;
   text-align: right;
 }
+/* responsive css */
+/* top banner css */
+@media only screen and (max-width: 999px) {
+  .text-box {
+    width: 60%;
+    padding-top: 50px;
+
+  }
+}
+@media only screen and (max-width: 750px) {
+  .text-box {
+    width: 60%;
+    padding-top: 50px;
+
+  }
+  .text-box p {
+    padding-right: 20px;
+  }
+  .search-flt .t-two-fields-bx,
+  .bttm-inner-bx {
+    flex-direction: column;
+  }
+  .btn-box {
+    justify-content: flex-start;
+  }
+  .inner-from-sec {
+    padding-left: 0;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .text-box {
+    width: 80%;
+    padding-top: 50px;
+  }
+  .text-box p {
+    padding-right: 10px;
+  }
+}
