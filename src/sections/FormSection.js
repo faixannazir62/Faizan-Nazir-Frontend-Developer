@@ -44,7 +44,7 @@ function FormSection() {
                   <option value="">Status</option>
                   <option value="active">Active</option>
                   <option value="retired">Retired</option>
-                  <option value="retired">Destroyed</option>
+                  <option value="destroyed">Destroyed</option>
                   <option value="unknown">Unknown</option>
                 </select>
               </div>
