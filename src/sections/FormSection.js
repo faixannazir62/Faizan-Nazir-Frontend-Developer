@@ -7,6 +7,7 @@ function FormSection() {
   const filters = {};
   // on form submit
   const onFormSubmit = (event) => {
+    SetFiltersActive(true);
     event.preventDefault();
     // Get all the select fields using querySelectorAll
     var selectFields = document.querySelectorAll(".field");
@@ -18,7 +19,7 @@ function FormSection() {
       // Scroll to the bottom of the page
       window.scrollTo(0, document.body.scrollHeight);
       //Make filter Active
-      SetFiltersActive(true);
+      
     });
     // passing fillters: it was sending empty object if we direct store filters into setFilters variable.
     setFilters(filters);

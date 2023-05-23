@@ -13,7 +13,6 @@ function App() {
   const [filtersActive, SetFiltersActive] = useState(false);
   //filter varible
   const [filters, setFilters] = useState({});
-  console.log("app filters", filters);
   return (
     <>
       {/* Header component */}
