@@ -9,8 +9,11 @@ function App() {
   //gobal varibles
   const [dataLoaded, setDataLoaded] = useState(false);
   const [fetcheddata, setFetchedData] = useState([]);
-  //for end points
-  const filters = {};
+  // filter are active or not
+  const [filtersActive, SetFiltersActive] = useState(false);
+  //filter varible
+  const [filters, setFilters] = useState({});
+  console.log("app filters", filters);
   return (
     <>
       {/* Header component */}
@@ -28,6 +31,9 @@ function App() {
             fetcheddata,
             setFetchedData,
             filters,
+            setFilters,
+            filtersActive,
+            SetFiltersActive,
           }}
         >
           {/* form section section component */}

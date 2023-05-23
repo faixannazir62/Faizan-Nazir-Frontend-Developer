@@ -3,7 +3,7 @@ import { DataContext } from "../contexts/DataContext";
 import { Endpoints } from "../functions/Endpoints";
 import Gridjsx from "../functions/Gridjsx";
 function GridSection() {
-  const { dataLoaded, setDataLoaded, setFetchedData, filters } =
+  const { dataLoaded, setDataLoaded, setFetchedData, filters, filtersActive } =
     useContext(DataContext);
   useEffect(() => {
     loadData();
@@ -12,7 +12,7 @@ function GridSection() {
     // Send the request to the PHP file
     await fetch(
       "http://localhost:3500/rest/index.php?endpoint=" +
-        encodeURIComponent(Endpoints(filters)),
+        encodeURIComponent(Endpoints({ filters, filtersActive })),
       {
         method: "GET",
         headers: {

@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import { DataContext } from "../contexts/DataContext";
 function FormSection() {
   //context api Gobal varibles
-  const { filters } = useContext(DataContext);
-
+  const { setFilters, SetFiltersActive } = useContext(DataContext);
+  const filters = {};
   // on form submit
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -16,8 +16,11 @@ function FormSection() {
       filters[propertyName] = selectedValue;
       // Scroll to the bottom of the page
       window.scrollTo(0, document.body.scrollHeight);
+      //Make filter Active
+      SetFiltersActive(true);
     });
-    console.log(filters);
+    // passing filtes
+    setFilters(filters);
   };
   return (
     <section className="main-from-sec">
