@@ -1,4 +1,4 @@
-<p>I have use Ractjs, Context API, Css, and Rest API</p>
+<p>I have used technologies like : Ractjs, Context API, Css, and Rest API</p>
 
 <h3>Website full page screenshot:<h3>
 
