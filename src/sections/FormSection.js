@@ -2,12 +2,15 @@ import React, { useContext } from "react";
 import { DataContext } from "../contexts/DataContext";
 function FormSection() {
   //context api Gobal varibles
-  const { setFilters, SetFiltersActive } = useContext(DataContext);
+  const { setFilters, SetFiltersActive, setDataLoaded } =
+    useContext(DataContext);
   // store filters locally
   const filters = {};
+
   // on form submit
   const onFormSubmit = (event) => {
-    SetFiltersActive(true);
+    // it will show loader on grid section, Until data is fetched
+    setDataLoaded(false);
     event.preventDefault();
     // Get all the select fields using querySelectorAll
     var selectFields = document.querySelectorAll(".field");
@@ -19,7 +22,7 @@ function FormSection() {
       // Scroll to the bottom of the page
       window.scrollTo(0, document.body.scrollHeight);
       //Make filter Active
-      
+      SetFiltersActive(true);
     });
     // passing fillters: it was sending empty object if we direct store filters into setFilters variable.
     setFilters(filters);
