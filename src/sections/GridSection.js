@@ -7,7 +7,7 @@ function GridSection() {
     useContext(DataContext);
   useEffect(() => {
     loadData();
-  });
+  }, [filters, filtersActive]);
   const loadData = async () => {
     // Send the request to the PHP file
     await fetch(
