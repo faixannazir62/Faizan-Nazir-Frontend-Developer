@@ -1,7 +1,7 @@
 export const Endpoints = ({ filters, filtersActive }) => {
   //api link
   var apiUrl = "https://api.spacexdata.com/v3/capsules?";
-  if (filtersActive == true) {
+  if (filtersActive === true) {
     // Loop through the object and append key-value pairs to the URL
     for (var key in filters) {
       apiUrl +=
