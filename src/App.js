@@ -13,6 +13,8 @@ function App() {
   const [filtersActive, SetFiltersActive] = useState(false);
   //filter varible
   const [filters, setFilters] = useState({});
+  // this variable is used to check array is not null
+  const [dataNotNull, setDataNotNull] = useState(true);
   return (
     <>
       {/* Header component */}
@@ -33,6 +35,8 @@ function App() {
             setFilters,
             filtersActive,
             SetFiltersActive,
+            dataNotNull,
+            setDataNotNull,
           }}
         >
           {/* form section section component */}

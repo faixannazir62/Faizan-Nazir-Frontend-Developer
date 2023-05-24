@@ -1,10 +1,18 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { DataContext } from "../contexts/DataContext";
 import { Endpoints } from "../functions/Endpoints";
 import Gridjsx from "../functions/Gridjsx";
 function GridSection() {
-  const { dataLoaded, setDataLoaded, setFetchedData, filters, filtersActive } =
-    useContext(DataContext);
+  const {
+    dataLoaded,
+    setDataLoaded,
+    setFetchedData,
+    filters,
+    filtersActive,
+    dataNotNull,
+    setDataNotNull,
+  } = useContext(DataContext);
+
   useEffect(() => {
     loadData();
   }, [filters, filtersActive]);
@@ -23,13 +31,18 @@ function GridSection() {
       .then((response) => response.json())
       .then((data) => {
         // Handle the response from the PHP file
-        //console.log(data);
+        if (data.length === 0) {
+          setDataNotNull(false);
+          return;
+        }
+        setDataNotNull(true);
         setFetchedData(data);
         setDataLoaded(true);
       })
       .catch((error) => {
         // Handle any errors
         setDataLoaded(false);
+        setDataNotNull(false);
         console.error("Api is not responding");
       });
   };
@@ -38,7 +51,15 @@ function GridSection() {
       <div className="inner-grd-sec">
         <h1 className="grid-heading">Capsules Data</h1>
         {/* data is loaded or not, if not show text */}
-        {dataLoaded ? <Gridjsx /> : <p className="loader">Loading Data...</p>}
+        {dataNotNull ? (
+          dataLoaded ? (
+            <Gridjsx />
+          ) : (
+            <p className="loader">Loading Data...</p>
+          )
+        ) : (
+          <p className="loader">No Result Found</p>
+        )}
       </div>
     </section>
   );

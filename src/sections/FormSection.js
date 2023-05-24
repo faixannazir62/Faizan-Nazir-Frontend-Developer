@@ -2,13 +2,15 @@ import React, { useContext } from "react";
 import { DataContext } from "../contexts/DataContext";
 function FormSection() {
   //context api Gobal varibles
-  const { setFilters, SetFiltersActive, setDataLoaded } =
+  const { setFilters, SetFiltersActive, setDataLoaded, setDataNotNull } =
     useContext(DataContext);
   // store filters locally
   const filters = {};
 
   // on form submit
   const onFormSubmit = (event) => {
+    //show loader
+    setDataNotNull(true);
     // it will show loader on grid section, Until data is fetched
     setDataLoaded(false);
     event.preventDefault();
@@ -55,8 +57,8 @@ function FormSection() {
             </div>
             <div className="bttm-inner-bx">
               <div className="filter">
-                <select name="type" className="field">
-                  <option value="">Type</option>
+                <select name="capsule_id" className="field">
+                  <option value="">Capsule Id</option>
                   <option value="dragon1">Dragon1</option>
                   <option value="dragon2">Dragon2</option>
                 </select>
