@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { DataContext } from "../contexts/DataContext";
 function FormSection() {
-  //context api Gobal varibles
+  //context api Global varibles
   const { setFilters, SetFiltersActive, setDataLoaded, setDataNotNull } =
     useContext(DataContext);
   // store filters locally
