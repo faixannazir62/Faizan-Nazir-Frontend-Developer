@@ -1,7 +1,7 @@
 About This Landing page:
 I have used technologies like : Reactjs, Context API, Css, Php, and Rest API.
 
-In this landing page i have displayed data regarding SpaceX Capsules, it has nice and clean interface which made up of three section, Top banner,middle filter search section and last grid section in which capsule data is displayed.
+n this landing page, I have displayed data regarding SpaceX capsules. It features a nice and clean interface composed of three sections: the top banner, the middle filter search section, and the bottom grid section where capsule data is displayed.
 
 Working video of Landing page :  https://video.drift.com/v/ab8DXlU0m0W/
 
